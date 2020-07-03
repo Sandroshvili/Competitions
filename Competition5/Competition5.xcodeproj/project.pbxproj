@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		17084C9F24AF4F8800B1BE07 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17084C9E24AF4F8700B1BE07 /* Gradient.swift */; };
+		17084CA224AF56D200B1BE07 /* HomepageBaukasten-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17084CA124AF56D200B1BE07 /* HomepageBaukasten-Book.ttf */; };
+		17084CA424AF56E200B1BE07 /* HomepageBaukasten-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17084CA324AF56E200B1BE07 /* HomepageBaukasten-Bold.ttf */; };
+		17084CA724AF573300B1BE07 /* iCiel Gotham-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17084CA524AF573300B1BE07 /* iCiel Gotham-Medium.ttf */; };
+		17084CA824AF573300B1BE07 /* iCiel Gotham-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17084CA624AF573300B1BE07 /* iCiel Gotham-Thin.ttf */; };
 		177B12AD24AEFF78006E1D10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177B12AC24AEFF78006E1D10 /* AppDelegate.swift */; };
 		177B12AF24AEFF78006E1D10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177B12AE24AEFF78006E1D10 /* SceneDelegate.swift */; };
 		177B12B124AEFF78006E1D10 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177B12B024AEFF78006E1D10 /* DetailController.swift */; };
@@ -26,6 +30,10 @@
 
 /* Begin PBXFileReference section */
 		17084C9E24AF4F8700B1BE07 /* Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
+		17084CA124AF56D200B1BE07 /* HomepageBaukasten-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HomepageBaukasten-Book.ttf"; sourceTree = "<group>"; };
+		17084CA324AF56E200B1BE07 /* HomepageBaukasten-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HomepageBaukasten-Bold.ttf"; sourceTree = "<group>"; };
+		17084CA524AF573300B1BE07 /* iCiel Gotham-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iCiel Gotham-Medium.ttf"; sourceTree = "<group>"; };
+		17084CA624AF573300B1BE07 /* iCiel Gotham-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iCiel Gotham-Thin.ttf"; sourceTree = "<group>"; };
 		177B12A924AEFF78006E1D10 /* Competition5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Competition5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		177B12AC24AEFF78006E1D10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		177B12AE24AEFF78006E1D10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +63,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17084CA024AF56AE00B1BE07 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				17084CA124AF56D200B1BE07 /* HomepageBaukasten-Book.ttf */,
+				17084CA324AF56E200B1BE07 /* HomepageBaukasten-Bold.ttf */,
+				17084CA524AF573300B1BE07 /* iCiel Gotham-Medium.ttf */,
+				17084CA624AF573300B1BE07 /* iCiel Gotham-Thin.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		177B12A024AEFF77006E1D10 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +93,7 @@
 		177B12AB24AEFF78006E1D10 /* Competition5 */ = {
 			isa = PBXGroup;
 			children = (
+				17084CA024AF56AE00B1BE07 /* Fonts */,
 				177B12CC24AF03BD006E1D10 /* Cell */,
 				177B12C524AEFF92006E1D10 /* Additionals */,
 				177B12C424AEFF8B006E1D10 /* Controllers */,
@@ -184,9 +204,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17084CA424AF56E200B1BE07 /* HomepageBaukasten-Bold.ttf in Resources */,
 				177B12BC24AEFF7A006E1D10 /* LaunchScreen.storyboard in Resources */,
 				177B12B924AEFF7A006E1D10 /* Assets.xcassets in Resources */,
+				17084CA224AF56D200B1BE07 /* HomepageBaukasten-Book.ttf in Resources */,
 				177B12B424AEFF78006E1D10 /* Main.storyboard in Resources */,
+				17084CA724AF573300B1BE07 /* iCiel Gotham-Medium.ttf in Resources */,
+				17084CA824AF573300B1BE07 /* iCiel Gotham-Thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
