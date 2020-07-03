@@ -22,6 +22,7 @@
 		177B12D024AF03D9006E1D10 /* NormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177B12CF24AF03D9006E1D10 /* NormalCell.swift */; };
 		177B12D224AF0742006E1D10 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177B12D124AF0742006E1D10 /* JSON.swift */; };
 		177B12D424AF0AFA006E1D10 /* Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177B12D324AF0AFA006E1D10 /* Delegates.swift */; };
+		4193DEB624AF57B400A754DE /* APIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4193DEB524AF57B400A754DE /* APIServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		177B12CF24AF03D9006E1D10 /* NormalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalCell.swift; sourceTree = "<group>"; };
 		177B12D124AF0742006E1D10 /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		177B12D324AF0AFA006E1D10 /* Delegates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delegates.swift; sourceTree = "<group>"; };
+		4193DEB524AF57B400A754DE /* APIServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				177B12D124AF0742006E1D10 /* JSON.swift */,
+				4193DEB524AF57B400A754DE /* APIServices.swift */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4193DEB624AF57B400A754DE /* APIServices.swift in Sources */,
 				177B12B124AEFF78006E1D10 /* DetailController.swift in Sources */,
 				177B12D224AF0742006E1D10 /* JSON.swift in Sources */,
 				177B12B724AEFF78006E1D10 /* Competition5.xcdatamodeld in Sources */,
