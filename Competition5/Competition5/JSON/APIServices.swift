@@ -33,6 +33,27 @@ class APIServices {
             
         }.resume()
     }
+    
+    func fetchRecommendations(completion: @escaping (AllRecommendations) -> ()) {
+        
+        guard let url = URL(string: "https://api.themoviedb.org/3/movie/419704/recommendations?api_key=0fa79c85c4bd0a683eb77d3ada60eca1&language=en-US&page=1") else {return}
+        
+        URLSession.shared.dataTask(with: url) { (data, res, err) in
+            
+            guard let data = data else {return}
+            
+            do {
+                let decoder = JSONDecoder()
+                let recommendations = try decoder.decode(AllRecommendations.self, from: data)
+
+                completion(recommendations)
+                
+            } catch {
+                print(error.localizedDescription)
+            }
+            
+        }.resume()
+    }
 }
 
 struct Genres: Codable {

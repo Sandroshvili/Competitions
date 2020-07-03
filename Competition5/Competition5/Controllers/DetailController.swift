@@ -12,10 +12,14 @@ class DetailController: UIViewController {
     
     let apiservice = APIServices()
 
+
     var movie : Movie?
     
     var genres: Genres?
     var genresArr = [Genre]()
+    
+    var recommendations: AllRecommendations?
+    var recommendationsArr = [Recommendation]()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -24,7 +28,21 @@ class DetailController: UIViewController {
                 
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.reloadData()
+        //tableView.reloadData()
+        
+        apiservice.fetchRecommendations { (recs) in
+            
+            for recommendation in recs.results {
+                self.recommendationsArr.append(recommendation)
+                
+            }
+            
+            print(self.recommendationsArr)
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
     
     
