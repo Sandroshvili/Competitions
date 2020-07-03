@@ -54,6 +54,9 @@ extension NormalCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PopularCell", for: indexPath) as! PopularCell
         let movie = movies[indexPath.row]
+        
+        print(movie.voteAverage)
+        print(movie.voteCount)
         movie.backdropPath
             .downloadImage { (image) in
                 DispatchQueue.main.async {
