@@ -9,6 +9,8 @@
 import UIKit
 
 class DetailController: UIViewController {
+    
+    let apiservice = APIServices()
 
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var imgView: UIImageView!
@@ -16,6 +18,10 @@ class DetailController: UIViewController {
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var ratingImageView: UIImageView!
     var movie : Movie?
+    
+    var genres: Genres?
+    var genresArr = [Genre]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,6 +36,22 @@ class DetailController: UIViewController {
         ratingLabel.text = "\(movie!.voteAverage)"
         ratingImageView.image = UIImage(named: "\(Int( movie!.voteAverage / 2.0))")
         // Do any additional setup after loading the view.
+        
+        apiservice.fetchGenres { (genres) in
+            
+            for genre in genres.genres {
+                self.genresArr.append(genre)
+                
+            }
+            
+            //print(self.genresArr)
+            
+            DispatchQueue.main.async {
+               // self.collectionView.reloadData()
+            }
+        }
+        
+
     }
 
 
