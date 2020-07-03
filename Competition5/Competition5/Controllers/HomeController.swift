@@ -11,6 +11,8 @@ import UIKit
 class HomeController: UIViewController, MovieDelegate {
     
     
+
+    
     var movie : Movie?
     var selectedMovie : Int?
     
@@ -19,10 +21,12 @@ class HomeController: UIViewController, MovieDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("test1")
-        
         tableView.delegate = self
         tableView.dataSource = self
+        
+
+        
+
         // Do any additional setup after loading the view.
     }
     
@@ -54,7 +58,6 @@ extension HomeController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell", for: indexPath) as! HeaderCell
-            
             
             return cell
         }
