@@ -56,7 +56,7 @@ class APIServices {
     }
     
     typealias completion = (AllMovies) -> ()
-    func fetchCharacters(completion: @escaping (AllMovies) -> ()) {
+    func fetchMovies(completion: @escaping (AllMovies) -> ()) {
       guard let url = URL(string: "https://api.themoviedb.org/3/movie/popular?language=en-US&api_key=0fa79c85c4bd0a683eb77d3ada60eca1&page=1") else {return}
       URLSession.shared.dataTask(with: url) { (data, res, err) in
         guard let data = data else {return}

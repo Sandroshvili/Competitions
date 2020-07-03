@@ -26,7 +26,7 @@ class HeaderCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        apiService.fetchCharacters { (allMovies) in
+        apiService.fetchMovies { (allMovies) in
             self.allmovies = allMovies
             self.movies.append(contentsOf: allMovies.results)
             

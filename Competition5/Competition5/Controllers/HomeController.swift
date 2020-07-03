@@ -9,10 +9,7 @@
 import UIKit
 
 class HomeController: UIViewController, MovieDelegate {
-    
-    
 
-    
     var movie : Movie?
     var selectedMovie : Int?
     

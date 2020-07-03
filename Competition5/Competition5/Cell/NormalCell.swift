@@ -13,14 +13,14 @@ class NormalCell: UITableViewCell {
     let apiService = APIServices()
     var allmovies : AllMovies?
     var movies = [Movie]()
-        var delegate: MovieDelegate?
+    var delegate: MovieDelegate?
 
     @IBOutlet weak var collectionView: UICollectionView!
     override func awakeFromNib() {
         super.awakeFromNib()
         collectionView.delegate = self
         collectionView.dataSource = self
-        apiService.fetchCharacters { (allMovies) in
+        apiService.fetchMovies { (allMovies) in
             self.allmovies = allMovies
             self.movies.append(contentsOf: allMovies.results)
             
@@ -55,13 +55,12 @@ extension NormalCell: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PopularCell", for: indexPath) as! PopularCell
         let movie = movies[indexPath.row]
 
-        movie.backdropPath
+        movie.posterPath
             .downloadImage { (image) in
                 DispatchQueue.main.async {
                     cell.imageView.image = image
                 }
         }
-
 
         return cell
     }

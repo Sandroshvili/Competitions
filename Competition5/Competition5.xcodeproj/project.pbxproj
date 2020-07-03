@@ -29,6 +29,9 @@
 		177B12D424AF0AFA006E1D10 /* Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177B12D324AF0AFA006E1D10 /* Delegates.swift */; };
 		3478D77E24AF929B00FFCA70 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3478D77D24AF929B00FFCA70 /* test.swift */; };
 		418EE40824AF6FCB00BB877B /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418EE40724AF6FCB00BB877B /* API.swift */; };
+		418EE40A24AF9F0F00BB877B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418EE40924AF9F0F00BB877B /* SearchViewController.swift */; };
+		418EE40D24AF9F3300BB877B /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418EE40B24AF9F3300BB877B /* SearchCell.swift */; };
+		418EE40E24AF9F3300BB877B /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 418EE40C24AF9F3300BB877B /* SearchCell.xib */; };
 		4193DEB624AF57B400A754DE /* APIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4193DEB524AF57B400A754DE /* APIServices.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +60,9 @@
 		177B12D324AF0AFA006E1D10 /* Delegates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delegates.swift; sourceTree = "<group>"; };
 		3478D77D24AF929B00FFCA70 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		418EE40724AF6FCB00BB877B /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		418EE40924AF9F0F00BB877B /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		418EE40B24AF9F3300BB877B /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		418EE40C24AF9F3300BB877B /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
 		4193DEB524AF57B400A754DE /* APIServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,7 +115,6 @@
 				177B12B224AEFF78006E1D10 /* Main.storyboard */,
 				177B12BD24AEFF7A006E1D10 /* Info.plist */,
 				177B12B524AEFF78006E1D10 /* Competition5.xcdatamodeld */,
-				177B12C824AF009C006E1D10 /* PopularCell.swift */,
 				3478D77D24AF929B00FFCA70 /* test.swift */,
 			);
 			path = Competition5;
@@ -130,6 +135,7 @@
 			children = (
 				177B12B024AEFF78006E1D10 /* DetailController.swift */,
 				177B12C624AF0016006E1D10 /* HomeController.swift */,
+				418EE40924AF9F0F00BB877B /* SearchViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -151,9 +157,12 @@
 		177B12CC24AF03BD006E1D10 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				177B12C824AF009C006E1D10 /* PopularCell.swift */,
 				177B12CD24AF03CE006E1D10 /* HeaderCell.swift */,
 				177B12CF24AF03D9006E1D10 /* NormalCell.swift */,
 				17674DC724AF6A7B00D3DDC3 /* SimilarMovieCell.swift */,
+				418EE40B24AF9F3300BB877B /* SearchCell.swift */,
+				418EE40C24AF9F3300BB877B /* SearchCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -221,6 +230,7 @@
 				177B12B924AEFF7A006E1D10 /* Assets.xcassets in Resources */,
 				17084CA224AF56D200B1BE07 /* HomepageBaukasten-Book.ttf in Resources */,
 				177B12B424AEFF78006E1D10 /* Main.storyboard in Resources */,
+				418EE40E24AF9F3300BB877B /* SearchCell.xib in Resources */,
 				17084CA724AF573300B1BE07 /* iCiel Gotham-Medium.ttf in Resources */,
 				17084CA824AF573300B1BE07 /* iCiel Gotham-Thin.ttf in Resources */,
 			);
@@ -236,6 +246,7 @@
 				4193DEB624AF57B400A754DE /* APIServices.swift in Sources */,
 				177B12B124AEFF78006E1D10 /* DetailController.swift in Sources */,
 				17674DC824AF6A7B00D3DDC3 /* SimilarMovieCell.swift in Sources */,
+				418EE40A24AF9F0F00BB877B /* SearchViewController.swift in Sources */,
 				177B12D224AF0742006E1D10 /* JSON.swift in Sources */,
 				418EE40824AF6FCB00BB877B /* API.swift in Sources */,
 				3478D77E24AF929B00FFCA70 /* test.swift in Sources */,
@@ -245,6 +256,7 @@
 				177B12C924AF009C006E1D10 /* PopularCell.swift in Sources */,
 				177B12CE24AF03CE006E1D10 /* HeaderCell.swift in Sources */,
 				177B12D424AF0AFA006E1D10 /* Delegates.swift in Sources */,
+				418EE40D24AF9F3300BB877B /* SearchCell.swift in Sources */,
 				177B12AF24AEFF78006E1D10 /* SceneDelegate.swift in Sources */,
 				177B12C724AF0016006E1D10 /* HomeController.swift in Sources */,
 				177B12CB24AF01D1006E1D10 /* Extensions.swift in Sources */,
