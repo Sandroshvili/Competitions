@@ -18,6 +18,9 @@ class HomeController: UIViewController, MovieDelegate {
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("test1")
+        
         tableView.delegate = self
         tableView.dataSource = self
         // Do any additional setup after loading the view.
