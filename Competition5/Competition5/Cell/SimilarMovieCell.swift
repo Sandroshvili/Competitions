@@ -10,6 +10,13 @@ import UIKit
 
 class SimilarMovieCell: UITableViewCell {
 
+    @IBOutlet weak var imgView: UIImageView! {
+        didSet {
+            imgView.layer.cornerRadius = 5
+        }
+    }
+    
+    @IBOutlet weak var movieTitle: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

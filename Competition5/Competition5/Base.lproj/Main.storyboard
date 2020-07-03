@@ -8,6 +8,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="HomepageBaukasten-Bold.ttf">
+            <string>HomepageBaukasten-Bold</string>
+        </array>
         <array key="HomepageBaukasten-Book.ttf">
             <string>HomepageBaukasten-Book</string>
         </array>
@@ -45,7 +48,7 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <color key="sectionIndexColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="605" id="4BW-mD-QfZ" customClass="HeaderCell" customModule="Competition5" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="605" id="4BW-mD-QfZ" customClass="HeaderCell" customModule="Competition5" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="605"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4BW-mD-QfZ" id="xnC-U2-73l">
@@ -104,10 +107,18 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSr-bj-tnV">
+                                                    <rect key="frame" x="25" y="491" width="364" height="17"/>
+                                                    <fontDescription key="fontDescription" name="HomepageBaukasten-Bold" family="HomepageBaukasten" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="xyz-Jf-iHa" firstAttribute="top" secondItem="Kh6-Hb-84X" secondAttribute="bottom" constant="5" id="05p-Nb-2JS"/>
                                                 <constraint firstItem="Kh6-Hb-84X" firstAttribute="top" secondItem="mr3-Xr-n9K" secondAttribute="bottom" id="0h9-Mp-qPY"/>
+                                                <constraint firstItem="eSr-bj-tnV" firstAttribute="top" secondItem="xyz-Jf-iHa" secondAttribute="bottom" constant="5" id="2mn-sZ-dVf"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="eSr-bj-tnV" secondAttribute="trailing" constant="5" id="45I-GT-o9f"/>
                                                 <constraint firstItem="gM0-1d-xVF" firstAttribute="leading" secondItem="xnC-U2-73l" secondAttribute="leadingMargin" constant="5" id="Drt-1S-vDj"/>
                                                 <constraint firstItem="gM0-1d-xVF" firstAttribute="trailing" secondItem="xnC-U2-73l" secondAttribute="trailingMargin" constant="-5" id="Ilz-Ic-giE"/>
                                                 <constraint firstItem="Kh6-Hb-84X" firstAttribute="centerX" secondItem="xnC-U2-73l" secondAttribute="centerX" id="O9r-il-asj"/>
@@ -118,6 +129,7 @@
                                                 <constraint firstItem="D0R-FC-Yui" firstAttribute="top" secondItem="xnC-U2-73l" secondAttribute="topMargin" constant="5" id="a4q-Ks-RQK"/>
                                                 <constraint firstItem="mr3-Xr-n9K" firstAttribute="leading" secondItem="xnC-U2-73l" secondAttribute="leadingMargin" constant="5" id="e3r-Eb-sow"/>
                                                 <constraint firstItem="mr3-Xr-n9K" firstAttribute="height" secondItem="gM0-1d-xVF" secondAttribute="height" multiplier="0.3075" id="ify-15-dS8"/>
+                                                <constraint firstItem="eSr-bj-tnV" firstAttribute="leading" secondItem="xnC-U2-73l" secondAttribute="leadingMargin" constant="5" id="jNF-HD-MLV"/>
                                                 <constraint firstItem="xyz-Jf-iHa" firstAttribute="centerX" secondItem="xnC-U2-73l" secondAttribute="centerX" id="niD-B6-HeJ"/>
                                                 <constraint firstItem="Kh6-Hb-84X" firstAttribute="top" secondItem="gM0-1d-xVF" secondAttribute="bottom" id="nxN-10-oSc"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="mr3-Xr-n9K" secondAttribute="trailing" constant="5" id="wGx-IS-3Ki"/>
@@ -125,6 +137,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <connections>
+                                            <outlet property="descriptionLabel" destination="eSr-bj-tnV" id="1WC-Jx-VaJ"/>
                                             <outlet property="imgView" destination="gM0-1d-xVF" id="FrP-g6-IM9"/>
                                             <outlet property="movieLabel" destination="rAo-yj-U5d" id="V9x-ch-geE"/>
                                             <outlet property="movieRating" destination="Kh6-Hb-84X" id="nql-df-bm2"/>
@@ -242,7 +255,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="605" id="SOJ-8O-ytP" customClass="HeaderCell" customModule="Competition5" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="605" id="SOJ-8O-ytP" customClass="HeaderCell" customModule="Competition5" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="605"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SOJ-8O-ytP" id="bbf-tr-rfI">
@@ -256,17 +269,17 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLa-Xa-Efm">
-                                                    <rect key="frame" x="162" y="316" width="90" height="90"/>
+                                                    <rect key="frame" x="162" y="316" width="90" height="70"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="90" id="KUc-VC-lSR"/>
-                                                        <constraint firstAttribute="height" constant="90" id="xGk-5l-yy6"/>
+                                                        <constraint firstAttribute="height" constant="70" id="xGk-5l-yy6"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="HomepageBaukasten-Book" family="HomepageBaukasten" pointSize="33"/>
                                                     <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4XM-5d-axj">
-                                                    <rect key="frame" x="132" y="411" width="150" height="30"/>
+                                                    <rect key="frame" x="132" y="391" width="150" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="150" id="99d-ra-Y8c"/>
                                                         <constraint firstAttribute="height" constant="30" id="muF-ky-HWs"/>
@@ -301,14 +314,30 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5K9-wY-VjM">
+                                                    <rect key="frame" x="25" y="423" width="364" height="0.0"/>
+                                                    <fontDescription key="fontDescription" name="HomepageBaukasten-Book" family="HomepageBaukasten" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XW9-vB-6V1">
+                                                    <rect key="frame" x="25" y="594" width="364" height="0.0"/>
+                                                    <fontDescription key="fontDescription" name="HomepageBaukasten-Bold" family="HomepageBaukasten" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="4XM-5d-axj" firstAttribute="top" secondItem="CLa-Xa-Efm" secondAttribute="bottom" constant="5" id="0VL-MN-2Le"/>
                                                 <constraint firstItem="Vvj-JA-8NP" firstAttribute="trailing" secondItem="bbf-tr-rfI" secondAttribute="trailingMargin" id="4Z7-q0-BZk"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="5K9-wY-VjM" secondAttribute="trailing" constant="5" id="9ai-nb-jUp"/>
                                                 <constraint firstItem="CLa-Xa-Efm" firstAttribute="top" secondItem="Vvj-JA-8NP" secondAttribute="bottom" id="9jr-B2-cHJ"/>
                                                 <constraint firstItem="Vvj-JA-8NP" firstAttribute="top" secondItem="bbf-tr-rfI" secondAttribute="topMargin" constant="5" id="D4i-FY-5w2"/>
+                                                <constraint firstItem="XW9-vB-6V1" firstAttribute="bottom" secondItem="bbf-tr-rfI" secondAttribute="bottomMargin" id="DJd-Rw-0qL"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="GTK-Hb-Em9" secondAttribute="trailing" id="Mbg-1F-iXg"/>
                                                 <constraint firstItem="nah-re-mT9" firstAttribute="leading" secondItem="bbf-tr-rfI" secondAttribute="leadingMargin" id="X3c-y7-HTE"/>
+                                                <constraint firstItem="5K9-wY-VjM" firstAttribute="leading" secondItem="bbf-tr-rfI" secondAttribute="leadingMargin" constant="5" id="Xfk-rD-KSq"/>
+                                                <constraint firstItem="XW9-vB-6V1" firstAttribute="leading" secondItem="bbf-tr-rfI" secondAttribute="leadingMargin" constant="5" id="ZY5-wl-h3T"/>
                                                 <constraint firstItem="GTK-Hb-Em9" firstAttribute="top" secondItem="bbf-tr-rfI" secondAttribute="topMargin" constant="5" id="gnZ-cd-xY0"/>
                                                 <constraint firstItem="4XM-5d-axj" firstAttribute="centerX" secondItem="bbf-tr-rfI" secondAttribute="centerX" id="hgV-UT-q4P"/>
                                                 <constraint firstItem="CLa-Xa-Efm" firstAttribute="top" secondItem="nah-re-mT9" secondAttribute="bottom" id="svQ-dO-Kh5"/>
@@ -318,24 +347,64 @@
                                                 <constraint firstItem="GTK-Hb-Em9" firstAttribute="leading" secondItem="bbf-tr-rfI" secondAttribute="leadingMargin" id="xBs-N3-jUP"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="nah-re-mT9" secondAttribute="trailing" id="xm0-gC-9lH"/>
                                                 <constraint firstItem="CLa-Xa-Efm" firstAttribute="centerX" secondItem="bbf-tr-rfI" secondAttribute="centerX" id="z4S-TN-6yW"/>
+                                                <constraint firstItem="5K9-wY-VjM" firstAttribute="top" secondItem="4XM-5d-axj" secondAttribute="bottom" constant="2" id="z8v-Ip-3u8"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="XW9-vB-6V1" secondAttribute="trailing" constant="5" id="zcn-GI-qpd"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <connections>
+                                            <outlet property="descriptionLabel" destination="5K9-wY-VjM" id="EHh-B3-pnF"/>
                                             <outlet property="imgView" destination="Vvj-JA-8NP" id="J8B-H8-RUY"/>
                                             <outlet property="movieLabel" destination="P7Y-Sc-bs3" id="rhK-B0-pTh"/>
                                             <outlet property="movieRating" destination="CLa-Xa-Efm" id="wrh-Ls-FUw"/>
                                             <outlet property="movieRatingImageView" destination="4XM-5d-axj" id="0j1-nL-9U0"/>
+                                            <outlet property="recommendationsLabel" destination="XW9-vB-6V1" id="aN0-9g-hca"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SimilarMovieCell" rowHeight="155" id="THv-4t-OI0" customClass="SimilarMovieCell" customModule="Competition5" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="633" width="414" height="155"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SimilarMovieCell" rowHeight="175" id="THv-4t-OI0" customClass="SimilarMovieCell" customModule="Competition5" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="633" width="414" height="175"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="THv-4t-OI0" id="vMR-Kd-vnK">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="155"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="175"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uKL-PH-fok">
+                                                    <rect key="frame" x="20" y="11" width="227.5" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="IVx-v8-kco"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IvH-zE-wNl">
+                                                    <rect key="frame" x="269.5" y="11" width="119.5" height="15"/>
+                                                    <fontDescription key="fontDescription" name="iCielGotham-Medium" family="iCiel Gotham" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="download" translatesAutoresizingMaskIntoConstraints="NO" id="6dY-gG-Rxw">
+                                                    <rect key="frame" x="247.5" y="91" width="141.5" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="ioX-Th-DNM"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
                                             <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="6dY-gG-Rxw" secondAttribute="trailing" constant="5" id="MzN-B4-8zp"/>
+                                                <constraint firstItem="6dY-gG-Rxw" firstAttribute="bottom" secondItem="uKL-PH-fok" secondAttribute="bottom" id="OgF-hL-1cw"/>
+                                                <constraint firstItem="6dY-gG-Rxw" firstAttribute="leading" secondItem="uKL-PH-fok" secondAttribute="trailing" id="SQu-Zd-iwz"/>
+                                                <constraint firstItem="IvH-zE-wNl" firstAttribute="leading" secondItem="uKL-PH-fok" secondAttribute="trailing" constant="22" id="U1m-Vv-sA5"/>
+                                                <constraint firstItem="uKL-PH-fok" firstAttribute="top" secondItem="vMR-Kd-vnK" secondAttribute="topMargin" id="fRq-7B-cJa"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="IvH-zE-wNl" secondAttribute="trailing" constant="5" id="g4M-jn-yif"/>
+                                                <constraint firstItem="IvH-zE-wNl" firstAttribute="top" secondItem="uKL-PH-fok" secondAttribute="top" id="j8z-NK-8La"/>
+                                                <constraint firstItem="uKL-PH-fok" firstAttribute="width" secondItem="vMR-Kd-vnK" secondAttribute="width" multiplier="0.55" id="kED-0n-zXo"/>
+                                                <constraint firstItem="uKL-PH-fok" firstAttribute="leading" secondItem="vMR-Kd-vnK" secondAttribute="leadingMargin" id="uLQ-hc-5Ih"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <connections>
+                                            <outlet property="imgView" destination="uKL-PH-fok" id="o3p-M9-KTp"/>
+                                            <outlet property="movieTitle" destination="IvH-zE-wNl" id="JNR-oa-KdF"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -392,6 +461,7 @@
     </scenes>
     <resources>
         <image name="back" width="57" height="14"/>
+        <image name="download" width="76.5" height="16.5"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
     </resources>

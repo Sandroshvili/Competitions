@@ -10,13 +10,10 @@ import UIKit
 
 class DetailController: UIViewController {
     
-    let apiservice = APIServices()
-
-
-    var movie : Movie?
+    let apiService = APIServices()
     
-    var genres: Genres?
-    var genresArr = [Genre]()
+    
+    var movie : Movie?
     
     var recommendations: AllRecommendations?
     var recommendationsArr = [Recommendation]()
@@ -25,24 +22,20 @@ class DetailController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         tableView.delegate = self
         tableView.dataSource = self
-        //tableView.reloadData()
-        
-        apiservice.fetchRecommendations { (recs) in
-            
+        apiService.fetchRecommendations(completion: { (recs) in
             for recommendation in recs.results {
                 self.recommendationsArr.append(recommendation)
                 
             }
-            
-            print(self.recommendationsArr)
-            
+
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
-        }
+            
+        }, id: movie!.id)
     }
     
     
@@ -62,13 +55,13 @@ extension DetailController: UITableViewDelegate {
 extension DetailController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return recommendationsArr.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell", for: indexPath) as! HeaderCell
-
+            
             cell.movieLabel.text = movie!.title
             movie!.backdropPath
                 .downloadImage { (image) in
@@ -78,17 +71,28 @@ extension DetailController: UITableViewDataSource {
             }
             cell.movieRatingImageView.image =  UIImage(named: "\(Int( movie!.voteAverage / 2.0))")
             cell.movieRating.text = "\(movie!.voteAverage)"
+            cell.recommendationsLabel.text = "Movie Recommendations"
+            cell.descriptionLabel.text = movie!.overview
             return cell
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "SimilarMovieCell") as! SimilarMovieCell
+        let recommendedMovie = recommendationsArr[indexPath.row]
+        recommendedMovie.backdropPath
+            .downloadImage { (image) in
+                DispatchQueue.main.async {
+                    cell.imgView.image = image
+                }
+        }
+        cell.movieTitle.text = recommendedMovie.title
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
-            return 622
+            return 645
         }
-        return 1300
+        return 125
     }
     
     

@@ -10,14 +10,18 @@ import UIKit
 
 class HeaderCell: UITableViewCell {
     
-    let apiService = APIService()
+    let apiService = APIServices()
     var allmovies : AllMovies?
+    var genres: Genres?
+    var genresArr = [Genre]()
     var movies = [Movie]()
     
     @IBOutlet weak var movieLabel: UILabel!
     @IBOutlet weak var movieRating: UILabel!
     @IBOutlet weak var movieRatingImageView: UIImageView!
-    @IBOutlet weak var imgView: UIImageView! 
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var recommendationsLabel: UILabel!
+    @IBOutlet weak var imgView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -37,11 +41,16 @@ class HeaderCell: UITableViewCell {
                 }
                 self.movieRatingImageView.image =  UIImage(named: "\(Int( movie.voteAverage / 2.0))")
                 self.movieRating.text = "\(movie.voteAverage)"
+                self.descriptionLabel.text = "Action | Drama | Fantasy"
+
+//                self.recommendationsLabel.text = "Popular"
             }
             
             
             
         }
+        
+
         // Initialization code
     }
     

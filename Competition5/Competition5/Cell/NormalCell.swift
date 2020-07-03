@@ -10,7 +10,7 @@ import UIKit
 
 class NormalCell: UITableViewCell {
     
-    let apiService = APIService()
+    let apiService = APIServices()
     var allmovies : AllMovies?
     var movies = [Movie]()
         var delegate: MovieDelegate?
