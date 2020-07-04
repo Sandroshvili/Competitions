@@ -55,7 +55,11 @@ extension DetailController: UITableViewDelegate {
 extension DetailController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return recommendationsArr.count
+        if recommendationsArr.isEmpty {
+            return 1
+        } else {
+            return recommendationsArr.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
