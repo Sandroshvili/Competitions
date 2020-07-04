@@ -67,7 +67,7 @@ extension DetailController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell", for: indexPath) as! HeaderCell
             
             cell.movieLabel.text = movie!.title
-            movie!.backdropPath
+            movie!.posterPath
                 .downloadImage { (image) in
                     DispatchQueue.main.async {
                         cell.imgView.image = image

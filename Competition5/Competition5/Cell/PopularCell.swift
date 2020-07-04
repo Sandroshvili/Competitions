@@ -15,4 +15,10 @@ class PopularCell: UICollectionViewCell {
             imageView.layer.cornerRadius = 15
         }
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+
+        imageView.image = nil
+    }
 }
