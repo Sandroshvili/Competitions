@@ -50,6 +50,14 @@ struct Recommendation: Codable {
     }
 }
 
+
+
+//enum OriginalLanguage: String, Codable {
+//    case en = "en"
+//    case it = "it"
+//    case ko = "ko"
+//}
+
 //enum OriginalLanguage: String, Codable {
 //    case en = "en"
 //    case ko = "ko"

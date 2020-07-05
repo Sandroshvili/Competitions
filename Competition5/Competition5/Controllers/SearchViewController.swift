@@ -75,7 +75,7 @@ extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         if !searchText.isEmpty {
-            self.filteredMovies = self.movies.filter({ $0.title.lowercased().contains(searchText.lowercased()) || $0.originalTitle.lowercased().contains(searchText.lowercased()) })
+            self.filteredMovies = self.movies.filter({ $0.title.lowercased().contains(searchText.lowercased()) || $0.title.lowercased().contains(searchText.lowercased()) })
             self.collectionView.reloadData()
             
         } else {

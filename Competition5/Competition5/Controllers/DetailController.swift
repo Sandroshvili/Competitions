@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Competition5
 //
-//  Created by Sandroshvili on 7/3/20.
+//  Created by Vakho on 7/3/20.
 //  Copyright © 2020 Apple Inc. All rights reserved.
 //
 

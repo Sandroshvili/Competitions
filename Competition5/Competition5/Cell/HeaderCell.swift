@@ -33,7 +33,7 @@ class HeaderCell: UITableViewCell {
             DispatchQueue.main.async {
                 let movie = self.movies[2]
                 self.movieLabel.text = movie.title
-                movie.backdropPath
+                movie.posterPath
                     .downloadImage { (image) in
                         DispatchQueue.main.async {
                             self.imgView.image = image
